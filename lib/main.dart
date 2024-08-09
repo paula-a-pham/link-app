@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:link/core/theme/light_theme.dart';
+import 'package:link/features/authentication/presentation/views/sign_in_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Link',
       theme: lightTheme,
-      home: const Scaffold(),
+      home: const SignInView(),
     );
   }
 }
