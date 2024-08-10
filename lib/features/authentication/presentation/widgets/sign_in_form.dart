@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:link/core/utils/helpers/validators/email_validator_helper.dart';
+import 'package:link/core/utils/helpers/validators/password_validator_helper.dart';
 import 'package:link/core/widgets/custom_filled_button.dart';
 import 'package:link/core/widgets/custom_outlined_button.dart';
 import 'package:link/features/authentication/presentation/widgets/auth_text_form_field.dart';
@@ -22,7 +24,7 @@ class SignInForm extends StatelessWidget {
             controller: emailController,
             hintText: 'Email',
             prefixIcon: Icons.email_rounded,
-            validator: (value) {},
+            validator: EmailValidatorHelper.validateEmailAddress,
             keyboardType: TextInputType.emailAddress,
           ),
           const SizedBox(
@@ -33,7 +35,7 @@ class SignInForm extends StatelessWidget {
             controller: passwordController,
             hintText: 'Password',
             prefixIcon: Icons.lock_rounded,
-            validator: (value) {},
+            validator: PasswordValidatorHelper.validatePassword,
             keyboardType: TextInputType.visiblePassword,
             obscureText: true,
             suffixIcon: Icons.visibility_rounded,
