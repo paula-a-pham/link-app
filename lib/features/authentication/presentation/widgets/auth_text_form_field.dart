@@ -49,12 +49,14 @@ class AuthTextFormField extends StatelessWidget {
         prefixIcon: Icon(
           prefixIcon,
         ),
-        suffixIcon: IconButton(
-          onPressed: () {},
-          icon: Icon(
-            suffixIcon,
-          ),
-        ),
+        suffixIcon: suffixIcon != null
+            ? IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  suffixIcon,
+                ),
+              )
+            : null,
       ),
       keyboardType: keyboardType,
       obscureText: obscureText!,
