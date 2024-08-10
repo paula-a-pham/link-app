@@ -23,6 +23,5 @@ class CustomOutlinedButton extends StatelessWidget {
         text,
       ),
     );
-    ;
   }
 }

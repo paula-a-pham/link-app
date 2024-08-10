@@ -27,31 +27,22 @@ class AuthTextFormField extends StatelessWidget {
       autovalidateMode: autovalidateMode,
       controller: controller,
       decoration: InputDecoration(
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15.0),
-          borderSide: BorderSide.none,
-        ),
-        disabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15.0),
-          borderSide: BorderSide.none,
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15.0),
-          borderSide: BorderSide.none,
-        ),
+        border: getFieldBorder(),
+        disabledBorder: getFieldBorder(),
+        enabledBorder: getFieldBorder(),
         errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15.0),
+          borderRadius: BorderRadius.circular(10.0),
           borderSide: BorderSide.none,
         ),
         filled: true,
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15.0),
+          borderRadius: BorderRadius.circular(10.0),
           borderSide: const BorderSide(
             width: 1.5,
           ),
         ),
         focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15.0),
+          borderRadius: BorderRadius.circular(10.0),
           borderSide: BorderSide.none,
         ),
         hintText: hintText,
@@ -68,6 +59,13 @@ class AuthTextFormField extends StatelessWidget {
       keyboardType: keyboardType,
       obscureText: obscureText!,
       validator: validator,
+    );
+  }
+
+  OutlineInputBorder getFieldBorder() {
+    return OutlineInputBorder(
+      borderRadius: BorderRadius.circular(10.0),
+      borderSide: BorderSide.none,
     );
   }
 }
